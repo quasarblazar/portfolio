@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Research Process</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navigation">
+        <a href="index.html" class="nav-brand">Digital Portfolio</a>
+        <ul class="navigationlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html" class="active">Research Process</a></li>
+            <li><a href="acknowledgements.html">Acknowledgments</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main class="research-content">
+
+            <section id="req-question" class="research-section">
+                <h3>Research Question</h3>
+                <p>How effectively can Artificial Intelligence improve cancer detection, diagnosis, and treatment?</p>
+            </section>
+            <section id="hypothesis" class="research-section">
+                <h3>Research Hypothesis</h3>
+                <p>If AI is able to be actively implemented in healthcare settings in conjunction with doctors, then it has the potential to greatly improve accuracy in detecting cancer.</p>
+            </section>
+            <section id="thesis" class="research-section">
+                <h3>Thesis</h3>
+                <p>While regulatory and implementation barriers remain, the integration of artificial intelligence into the field of oncology can be leveraged to effectively transform cancer detection, diagnosis, and treatment by operating as an efficient tool that is able to assist humans.</p>
+            </section>
+            <section id= "Secondary Research" class = "research-section">
+                <h3>Completed Secondary Research through the analysis of other Research Papers</h3>
+                <iframe class="pdf" src="readingreports.pdf" width="100%" height="600px"></iframe>
+            </section>
+            <section id = "Primary Research" class = "research">
+                <h3>Experiment</h3>
+            </section>
+                    <p>n this experiment the accuracy of a model over increasing amounts of training was tested. The experiment was conducted using Google’s Cloud-based IDE, Colaboratory, in which a deep learning algorithm that is specialized for image recognition, a convolutional neural network, was built. Using a dataset found on the dataset-hosting website Kaggle.com, consisting of 7200 images in total, with four different types of brain tumor MRIs, the model was trained using T4 GPUs over a varying number of epochs. An epoch is essentially a pass through of the entire dataset. 
+One of the primary ways in which cancer is able to be detected, diagnosed, and treated is through radiographic scans, such as CT scan or MRIs, in order to discern things like the presence, severity, and type of cancer. Because a convolutional neural network is particularly effective at categorizing and differentiating between images, it can be widely applied to the field of Oncology. However, in order to ensure that an artificial intelligence algorithm can be just as, if not more accurate than a human, they must undergo thorough training and testing. 
+In this experiment, the training, validation, and testing accuracy was measured over 1 epoch, 2 epochs, 5 epochs, 10 epochs, and 20 epochs over 4 separate trials. Test accuracy measures performance on entirely new images the model has never encountered, ensuring that results reflect real generalization ability rather than memorization of training data. The results demonstrate a clear and consistent relationship between training depth and accuracy. At just one epoch, test accuracy averaged 88.01% across all four trials, though with notable variability, indicating that minimal training produces unreliable results. By two epochs, average test accuracy rose to 98.37%, and by five epochs, all four trials exceeded 99.75%. At ten and twenty epochs, average test accuracy reached 99.91% and 100% respectively, with train and validation accuracy closely tracking these results throughout, suggesting the model generalized well without overfitting. This helps to confirm that with sufficient training, a convolutional neural network can classify brain tumor MRI images with a high level of accuracy.
+</p>
+                <h3>Interviews</h3>
+                <p>Conducted an Interview with Medical Physicist Dr. Kai Ding.<br> “The good thing is that in every process of our clinical workflow, we have a human in the loop. When we find a missing piece or an error from the AI contouring software, we will change it ourselves and make the necessary corrections.” </p>
+            </section>
+            <section id = "culmination" class = "research">
+                <h3>Synthesis Paper</h3>
+                <p>Completed a synthesis paper that is a culmination of my work and research throughout the 2025-2026 school year.</p>
+                <iframe class="pdf" src="paper.pdf" width="100%" height="600px"></iframe>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
