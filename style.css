@@ -37,10 +37,12 @@ body {
     font-size: 0.85rem;
     padding: 0 14px;
 }
+
 .container {
     max-width: 800px;
     margin: 50px auto;
     padding: 0 20px;
+    font-size:1.2rem;
 }
 
 .research-section h3 {
@@ -50,7 +52,7 @@ body {
 
 hr {
     border: 0;
-    border-top: 1px solid #e0e0e0;
+    border-top: 3px dashed #e0e0e0e9;
     margin: 30px 0;
 }
 
@@ -63,9 +65,9 @@ hr {
 }
 
 .pdf {
-        width: 100%;
-        aspect-ratio: 4 / 3;
-    }
+    width: 100%;
+    aspect-ratio: 4 / 3;
+}
 
 .banner {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('background.jpg');
@@ -78,10 +80,59 @@ hr {
 }
 
 .banner h1 {
+    font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
     color: #ffffff;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 600;
     margin: 0;
     letter-spacing: 1px;           
-    text-transform: uppercase;     
+   
+}
+
+.chart-container {
+    margin: 30px auto;
+    text-align: center; 
+    max-width: 100%;
+}
+
+.responsive-chart {
+    max-width: 100%;   
+    height: auto; 
+    border: 1px solid #e5e5e5;
+    border-radius: 4px; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
+} /* <--- THIS WAS THE MISSING BRACKET */
+
+.chart-caption {
+    font-size: 0.85rem;
+    color: #666666;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Interview Side-by-Side Flexbox Layout */
+.interview-container {
+    display: flex;
+    align-items: center;       
+    gap: 30px;                 
+    margin-top: 20px;
+}
+
+.interview-profile {
+    max-width: 200px;         
+    width: 100%;
+    height: auto;             
+    border-radius: 4px;       
+}
+
+.interview-text {
+    flex: 1;                  
+}
+
+/* Mobile Responsive Layout */
+@media (max-width: 650px) {
+    .interview-container {
+        flex-direction: column; 
+        text-align: center;
+    }
 }

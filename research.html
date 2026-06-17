@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Research Process</title>
+    <meta name="description" content="Ben Pant Research Portfolio">
+    <meta name="keywords" content="G/T Independent Research, Independent Research, research, Research, Ben Pant, Ben Pant Research, Ben Pant Portfolio, Research Portfolio, ben pant research, ben pant research portfolio">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -10,14 +12,16 @@
     <nav class="navigation">
         <a href="index.html" class="navbrand">Digital Portfolio</a>
         <ul class="navigationlinks">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Overview</a></li>
             <li><a href="research.html" class="active">Research Process</a></li>
-            <li><a href="acknowledgements.html">Acknowledgments</a></li>
+            <li><a href="acknowledgements.html">Acknowledgements</a></li>
         </ul>
     </nav>
+
     <div class="banner">
         <h1>Research Process</h1>
     </div>
+
     <div class="container">
         <main class="research-content">
 
@@ -25,37 +29,72 @@
                 <h3>Research Question</h3>
                 <p>How effectively can Artificial Intelligence improve cancer detection, diagnosis, and treatment?</p>
             </section>
+
+            <hr>
+
             <section id="hypothesis" class="research-section">
                 <h3>Research Hypothesis</h3>
                 <p>If AI is able to be actively implemented in healthcare settings in conjunction with doctors, then it has the potential to greatly improve accuracy in detecting cancer.</p>
             </section>
+
+            <hr>
+
             <section id="thesis" class="research-section">
                 <h3>Thesis</h3>
                 <p>While regulatory and implementation barriers remain, the integration of artificial intelligence into the field of oncology can be leveraged to effectively transform cancer detection, diagnosis, and treatment by operating as an efficient tool that is able to assist humans.</p>
             </section>
-            <section id= "Secondary Research" class = "research-section">
-                <h3>Completed Secondary Research through the analysis of other Research Papers</h3>
+
+            <hr>
+
+            <section id="secondary-research" class="research-section">
+                <h2>Secondary Research</h2>
+                <h3>Annotated Bibliography</h3>
+                <p>Completed Secondary Research through the analysis of other Research Papers</p>
                 <iframe class="pdf" src="readingreports.pdf" width="100%" height="600px"></iframe>
-                <h3>Created presentation and presented to another class utilizing secondary research</h3>
-                <section id="presentation" class="research-section">
-                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRFbGpHxoiQDPb8n6jlYIqV_mYhb1EQQol0pqkRIhq0leCrXxITJPW48GEF1cTM5gI1gcT64iMtmP6p/pubembed?start=false&loop=true&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-                </section>
+                
+                <h3 style="margin-top: 30px;">Presentation</h3>
+                <p>Presented summary of secondary research to Mrs. Rhee's AOOD class in December</p>
+                <div id="presentation">
+                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRFbGpHxoiQDPb8n6jlYIqV_mYhb1EQQol0pqkRIhq0leCrXxITJPW48GEF1cTM5gI1gcT64iMtmP6p/pubembed?start=false&loop=true&delayms=3000" frameborder="0" width="100%" height="450" allowfullscreen="true"></iframe>
+                </div>
             </section>
-            <section id = "Primary Research" class = "research">
+
+            <hr>
+
+            <section id="primary-research" class="research-section">
+                <h2>Primary Research</h2>
                 <h3>Experiment</h3>
-            
-                    <p>In this experiment the accuracy of a model over increasing amounts of training was tested. The experiment was conducted using Google’s Cloud-based IDE, Colaboratory, in which a deep learning algorithm that is specialized for image recognition, a convolutional neural network, was built. Using a dataset found on the dataset-hosting website Kaggle.com, consisting of 7200 images in total, with four different types of brain tumor MRIs, the model was trained using T4 GPUs over a varying number of epochs. An epoch is essentially a pass through of the entire dataset. 
-One of the primary ways in which cancer is able to be detected, diagnosed, and treated is through radiographic scans, such as CT scan or MRIs, in order to discern things like the presence, severity, and type of cancer. Because a convolutional neural network is particularly effective at categorizing and differentiating between images, it can be widely applied to the field of Oncology. However, in order to ensure that an artificial intelligence algorithm can be just as, if not more accurate than a human, they must undergo thorough training and testing. 
-In this experiment, the training, validation, and testing accuracy was measured over 1 epoch, 2 epochs, 5 epochs, 10 epochs, and 20 epochs over 4 separate trials. Test accuracy measures performance on entirely new images the model has never encountered, ensuring that results reflect real generalization ability rather than memorization of training data. The results demonstrate a clear and consistent relationship between training depth and accuracy. At just one epoch, test accuracy averaged 88.01% across all four trials, though with notable variability, indicating that minimal training produces unreliable results. By two epochs, average test accuracy rose to 98.37%, and by five epochs, all four trials exceeded 99.75%. At ten and twenty epochs, average test accuracy reached 99.91% and 100% respectively, with train and validation accuracy closely tracking these results throughout, suggesting the model generalized well without overfitting. This helps to confirm that with sufficient training, a convolutional neural network can classify brain tumor MRI images with a high level of accuracy.
-</p>
-                <h3>Interviews</h3>
-                <p>Conducted an Interview with Medical Physicist Dr. Kai Ding.<br> “The good thing is that in every process of our clinical workflow, we have a human in the loop. When we find a missing piece or an error from the AI contouring software, we will change it ourselves and make the necessary corrections.” </p>
+                <p>To test the viability of AI in oncology diagnosis, particularly with tumors located in the brain, a Convolutional Neural Network (CNN) was trained to classify 7,200 brain tumor MRIs across four categories. The experiment measured how training depth, measured in the number of epochs that the model was trained on, impacted accuracy on unseen data. The results showed a steep improvement curve: while a single training epoch yielded an unreliable accuracy, the model rapidly scaled to 98.37% at two epochs and reached 100% accuracy by twenty epochs. The data confirms that with thorough training, CNNs can successfully generalize data and accurately diagnose radiographic scans without overfitting.</p>     
+                
+                <div class="chart-container">
+                    <img src="accuracygraph.png" width="500" height="300" alt="Training Accuracy Over Increasing Epochs Graph" class="responsive-chart">
+                    <p class="chart-caption">Training accuracy percentages mapping progress from 1 to 20 epochs.</p>
+                </div>
             </section>
-            <section id = "culmination" class = "research">
+
+            <hr>
+
+            <section id="interviews" class="research-section">
+                <h3>Interviews</h3>
+                <div class="interview-container">
+                    <img src="kaiding.png" alt="Dr. Kai Ding" class="interview-profile">
+                    <div class="interview-text">
+                        <p>Conducted an interview with Medical Physicist Dr. Kai Ding.</p>
+                        <p style="font-style: italic;  margin-top: 10px;">
+                            “The good thing is that in every process of our clinical workflow, we have a human in the loop. When we find a missing piece or an error from the AI contouring software, we will change it ourselves and make the necessary corrections.”
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="culmination" class="research-section">
                 <h3>Synthesis Paper</h3>
                 <p>Completed a synthesis paper that is a culmination of my work and research throughout the 2025-2026 school year.</p>
                 <iframe class="pdf" src="paper.pdf" width="100%" height="600px"></iframe>
             </section>
+
         </main>
     </div>
 
